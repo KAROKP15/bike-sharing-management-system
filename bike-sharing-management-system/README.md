@@ -1,11 +1,12 @@
 # LUDA
-# 简单的表单网页，实现登录功能，数据来自数据库
+### 简单的表单网页，实现登录功能，数据来自数据库
 
 
-# 目录说明
+### 目录说明
 
 ├─ LUDA
-│  ├─ __pychache__
+│  ├─ __pychache__  
+
 │  ├─ __init__.py  
 │  ├─ .DS_Store     
 │  ├─ asgi.py
@@ -37,20 +38,20 @@
 ├─ manage.py
 └─ README.md
 
-# 构建环境
+### 构建环境
 
 VSCODE下编写HTML文件，CSS/JS均来自框架和网络
 数据库来自MySQL
 连接数据库的框架是以Python为基础的Django架构
 
-# 运行方法
+### 运行方法
 
 1.确认本机已安装Django
 2.来到项目文件目录下，在终端输入
     python manage.py migrate
     python3 manage.py runserver
 
-# 错误记录
+### 错误记录
 
 1. Error:”…TemplateDoesNotExist:index.html”
     解决方法：
