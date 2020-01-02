@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="author" content="Kodinger">
+	<title>修改密码 ｜ 鹿达</title>
+	{% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/my-login.css' %}">
+</head>
+<body class="my-login-page">
+	<section class="h-100">
+		<div class="container h-100">
+			<div class="row justify-content-md-center align-items-center h-100">
+				<div class="card-wrapper">
+					<div class="brand">
+						<img src="{% static 'img/bicycle_logo.png'%}">
+					</div>
+					<div class="card fat">
+						<div class="card-body">
+							<h4 class="card-title" style="text-align: center; font-size: 1;">重置密码</h4>
+							<form method="POST">
+
+								<div class="form-group">
+									<label for="new-password">新密码</label>
+									<input id="new-password" type="password" class="form-control" name="password" required autofocus data-eye>
+									<div class="form-text text-muted">
+										请确保你的密码易于记忆且不会过于简单
+									</div>
+								</div>
+
+								<div class="form-group no-margin">
+									<button type="submit" class="btn btn-primary btn-block">
+										重置密码
+									</button>
+								</div>
+							</form>
+						</div>
+					</div>
+					<div class="footer">
+						© 2019 您的选择 | 鹿达 - 更多信息 <a href="http://127.0.0.1:8000/main/" target="_blank" title="鹿达首页">鹿达首页</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<script src="{% static 'js/jquery.min.js' %}"></script>
+	<script src="{% static 'bootstrap/js/bootstrap.min.js'%}"></script>
+	<script src="{% static 'js/my-login.js'%}"></script>
+</body>
+</html>

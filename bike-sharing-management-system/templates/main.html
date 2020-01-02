@@ -1,0 +1,93 @@
+<!doctype html>
+
+<html>
+    <head>
+        <!-- META -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+        <!-- PAGE TITLE -->
+        <title>首页 | 鹿达</title>
+
+        <!-- STYLESHEETS -->
+        {% load static %}
+        <link rel="stylesheet" type="text/css" href="{% static 'assets/css/plugins.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'assets/css/main.css' %}">
+    </head>
+
+    <body>
+        <div class="preloader">
+            <div class="spinner">
+                 <div class="bounce-1"></div>
+                 <div class="bounce-2"></div>
+                 <div class="bounce-3"></div>
+            </div>
+        </div>
+
+        <div class="hero">
+            <div class="front-content">
+                <div class="container-mid">
+                    <div class="animation-container animation-fade-down" data-animation-delay="0">
+                         <img class="img-responsive logo" src="{% static 'assets/img/bicycle_logo.png' %}" alt="image">
+                    </div>
+                    <div class="animation-container animation-fade-right" data-animation-delay="300">
+                         <h1>鹿达</h1>
+                    </div>
+                    <div class="animation-container animation-fade-left" data-animation-delay="600">
+                        <p class="subline">一路通达</p>
+                    </div>
+                    <div class="animation-container animation-fade-up" data-animation-delay="900">
+                        <div class="open-popup">现在加入</div>
+                    </div>
+                </div>
+
+                <div class="footer">
+                    <div class="animation-container animation-fade-up" data-animation-delay="1200">
+                        © 2019 您的选择 | 鹿达 - 更多信息 <a href="http://127.0.0.1:8000/main/" target="_blank" title="鹿达首页">鹿达首页</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="background-content parallax-on">
+                <div class="background-overlay"></div>
+                <div class="background-img layer" data-depth="0.05"></div>
+            </div>
+        </div>
+
+        <div class="popup">
+            <div class="card">
+                    <div class="close-popup close-button"></div>
+
+                    <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                    <h3>注册</h3>
+                    <p class="subline">注册鹿达，体验最便捷的共享单车！</p>
+
+                    <!-- FORM -->
+                    <form method="post" class="subscribe-form">
+
+                        <button type="button" class="btn btn-primary form-control" onclick="window.open('http://127.0.0.1:8000/register/')">由此注册<i class="fa fa-long-arrow-right" aria-hidden="true"></i></button>
+
+                        <br>
+
+                        <button type="button" class="btn btn-primary form-control" onclick="window.open('http://127.0.0.1:8000/login/')">已有账号？<i class="fa fa-long-arrow-right" aria-hidden="true"></i></button>
+
+                    </form>
+                    <!-- /FORM -->
+
+
+            </div>
+
+
+        </div>
+        <!-- /POPUP ( SUBSCRIBE ) -->
+
+
+        <!-- JAVASCRIPTS -->
+        <script type="text/javascript" src="{% static 'assets/js/plugins.js' %}"></script>
+        <script type="text/javascript" src="{% static 'assets/js/main.js' %}"></script>
+
+
+    </body>
+
+
+</html>

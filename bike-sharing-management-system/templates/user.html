@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>单车查询 ｜ 鹿达</title>
+
+  {% load static %}
+  <link rel="stylesheet" type="text/css" href="{% static 'css/all.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/mdb.min.css' %}" >
+  <link rel="stylesheet" type="text/css" href="{% static 'css/style.min.css' %}">
+
+  <style>
+
+.map-container{
+overflow:hidden;
+padding-bottom:56.25%;
+position:relative;
+height:0;
+}
+
+.map-container iframe{
+left:0;
+top:0;
+height:100%;
+width:100%;
+position:absolute;
+}
+
+.brand {
+	background-color: #f7f9fb;
+	width: 120px;
+	height: 120px;
+	overflow: hidden;
+	border-radius: 50%;
+	margin: 0 auto;
+	margin: 40px auto;
+	box-shadow: 0 0 40px rgba(0,0,0,.05);
+}
+
+.brand img {
+	width: 100%;
+}
+  </style>
+</head>
+
+<body class="grey lighten-3">
+
+  <!--Main Navigation-->
+  <header>
+
+    <!-- Navbar -->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light white scrolling-navbar">
+      <div class="container-fluid">
+
+        <!-- Brand -->
+        <a class="navbar-brand waves-effect" href="#" target="_blank">
+          <strong class="blue-text">鹿达</strong>
+        </a>
+
+        <!-- Collapse -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Links -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+          <!-- Left -->
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link waves-effect" href="#">主页
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link waves-effect" href="#" target="_blank">关于鹿达
+                </a>
+            </li>
+          </ul>
+
+          <!-- Right -->
+          <ul class="navbar-nav nav-flex-icons">
+            <li class="nav-item">
+              <a href="#" class="nav-link border border-light rounded waves-effect"
+                target="_blank">退出
+              </a>
+            </li>
+          </ul>
+
+        </div>
+
+      </div>
+    </nav>
+    <!-- Navbar -->
+
+    <!-- Sidebar -->
+    <div class="sidebar-fixed position-fixed">
+
+      <div class="brand">
+        <img src="{% static 'img/bicycle_logo.png' %}">
+      </div>
+
+      <div class="list-group list-group-flush">
+        <a href="#" class="list-group-item active waves-effect">
+          单车查询</a>
+        <a href="#" class="list-group-item list-group-item-action waves-effect">
+          使用记录</a>
+        <a href="#" class="list-group-item list-group-item-action waves-effect">
+          账户信息</a>
+        <a href="#" class="list-group-item list-group-item-action waves-effect">
+          账号设置</a>
+        <a href="#" class="list-group-item list-group-item-action waves-effect">
+          关于</a>
+      </div>
+
+    </div>
+    <!-- Sidebar -->
+
+  </header>
+  <!--Main Navigation-->
+
+  <!--Main layout-->
+  <main class="pt-5 mx-lg-5">
+    <div class="container-fluid mt-5">
+
+      <!-- Heading -->
+      <div class="card mb-4 wow fadeIn">
+
+        <!--Card content-->
+        <div class="card-body d-sm-flex justify-content-between">
+
+          <h4 class="mb-2 mb-sm-0 pt-1">
+            <a href="#" target="_blank">主页</a>
+            <span>/</span>
+            <span>单车查询</span>
+          </h4>
+
+          <form class="d-flex justify-content-center">
+            <!-- Default input -->
+            <input type="search" placeholder="查询车辆信息" aria-label="Search" class="form-control">
+            <button class="btn btn-primary btn-sm my-0 p" type="submit">
+              <i class="fas fa-search"></i>
+            </button>
+
+          </form>
+
+        </div>
+
+      </div>
+      <!-- Heading -->
+
+      <!--Grid row-->
+      <div class="row wow fadeIn">
+
+        <!--Grid column-->
+        <div class="col-md-12 mb-4">
+
+          <!--Card-->
+          <div class="card">
+
+            <!--Card content-->
+            <div class="card-body">
+
+              <!-- Table  -->
+              <table class="table table-hover">
+                <!-- Table head -->
+                <thead class="blue lighten-4">
+                  <tr>
+                    <th>#</th>
+                    <th>车辆编号</th>
+                    <th>车辆状态</th>
+                    <th>所在区域</th>
+                  </tr>
+                </thead>
+                <!-- Table head -->
+
+                <!-- Table body -->
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>0001</td>
+                    <td>借出</td>
+                    <td>武汉</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td>0002</td>
+                    <td>可用</td>
+                    <td>武汉</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">3</th>
+                    <td>0003</td>
+                    <td>可用</td>
+                    <td>武汉</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">4</th>
+                    <td>0004</td>
+                    <td>借出</td>
+                    <td>武汉</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">5</th>
+                    <td>0005</td>
+                    <td>可用</td>
+                    <td>武汉</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">6</th>
+                    <td>0006</td>
+                    <td>可用</td>
+                    <td>武汉</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">7</th>
+                    <td>0007</td>
+                    <td>可用</td>
+                    <td>武汉</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">8</th>
+                    <td>0008</td>
+                    <td>可用</td>
+                    <td>武汉</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">9</th>
+                    <td>0009</td>
+                    <td>可用</td>
+                    <td>武汉</td>
+                  </tr>
+                </tbody>
+                <!-- Table body -->
+              </table>
+              <!-- Table  -->
+
+            </div>
+
+          </div>
+          <!--/.Card-->
+
+        </div>
+        <!--Grid column-->
+
+      </div>
+      <!--Grid row-->
+
+    </div>
+  </main>
+  <!--Main layout-->
+
+  <!--Footer-->
+  <footer class="page-footer text-center font-small primary-color-dark darken-2 mt-4 wow fadeIn">
+
+    <hr class="my-4">
+
+    <!--Copyright-->
+    <div class="footer-copyright py-3">
+      © 2019 您的选择 | 鹿达 - 更多信息 <a href="http://127.0.0.1:8000/main/" target="_blank" title="鹿达首页">鹿达首页</p>
+    </div>
+    <!--/.Copyright-->
+
+  </footer>
+  <!--/.Footer-->
+
+  <!-- SCRIPTS -->
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <script type="text/javascript" src="js/popper.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="js/mdb.min.js"></script>
+  <script type="text/javascript">
+    // Animations initialization
+    new WOW().init();
+
+</body>
+
+</html>
